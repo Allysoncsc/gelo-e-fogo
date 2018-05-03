@@ -6,11 +6,15 @@ iniciar o css com todas as tags html sem qualquer estilo padrão definido pelo b
 	margin: 0;
 	padding: 0;
 	font-family: Roboto, Arial;
-	font-size: 100%
+	font-size: 100%;
+	text-align: center;
+	/* altura e largura dos osbjetos */
+	box-sizing: border-box;
+	-webkit-box-sizing:border-box
 }
-
+/* atalho de inserir comentário é ctrl+k */
 p {
-	
+	text-align: left;
 	padding: 5px
 }
 
@@ -22,12 +26,75 @@ h1{
 .tituloDestaque{
 	font-size:2em;
 	text-transform: uppercase;
-	text-align: center;
+	
 	padding-bottom: 15px;
 	margin-bottom: 20px;
 	border-bottom: 3px dotted #CCC
 }
 
+.titulo{
+	text-transform:uppercase;
+	font-size: 1.3em;
+	
+}
+
+.textoVermeho{
+	color: #eb262a
+}
+.textoAzul{
+	color: #0089fa
+}
+.textoAmarelo{
+	color: #ffa900
+}
+.textoVerde{
+	color: #00c161
+}
+
+/* botao */
+.botao{
+	margin: 10px;
+	display: inline-block;
+	border: 1px solid;
+	color: #fff;
+	cursor: pointer
+}
+.botaoMedio{
+	padding: 10px 30px
+}
+.botaoGrande{
+	padding: 15px 50px
+}
+
+/* cores botoes */
+.botaoAmarelo{
+	background-color: #ffa900;
+	border-color: #ec9f00
+}
+.botaoAmarelo:hover{
+	background-color: #ffbe37
+}
+.botaoAzul{
+	background-color: #0089fa;
+	border-color: #0082ec
+}
+.botaoAzul:hover{
+	background-color: #51b0ff
+}
+.botaoVerde{
+	background-color: #00a753;
+	border-color: #009d4f
+}
+.botaoVerde:hover{
+	background-color: #00c161
+}
+.botaoVermelho{
+	background-color: #eb260a;
+	border-color: #d3230a
+}
+.botaoVermelho:hover{
+	background-color: #f43d22
+}
 
 /*corpo */
 .corpo{
@@ -45,8 +112,15 @@ h1{
 }
 
 .logo{
+	float: left;
 	width:200px;
 	height:150px
+}
+
+.limpa{
+	clear: both;
+	overflow: hidden;
+	display:block
 }
 
 .verde{
@@ -59,7 +133,8 @@ h1{
 	display: block;
 	float:right;
 	margin-top: 40px;
-	background: green
+	background: green;
+	
 }
 
 .menu li{
@@ -83,15 +158,83 @@ h1{
 	text-decoration: underline
 }
 
+img{
+	width:100%;
+	height:100%;
+	border: 0;
+	padding: 5px;
+}
 
+.preto{
+	background:#333;
+	color:#ccc
+}
 
+/* SLIDE DE IMAGENS */
+.slide {
+	min-height:350px;
+	border: 5px solid #fff;
+	position:relative;
+	text-align: left
+}
+.slideImagem{
+	position:absolute;
+	opacity: 0;
+	animation: animaSlide 15s infinite;
+	-webkit-animation: animaSlide 15s infinite;
+}
+@keyframes animaSlide{
+	25%{
+		opacity:1
+	}
+	75%{
+		opacity:0
+	}
+}
 
+.slideImagem:nth-child(0){
+	animation-delay: 0s
+}
 
+.slideImagem:nth-child(1){
+	animation-delay: 5s
+}
 
+.slideImagem:nth-child(2){
+	animation-delay: 10s
+}
 
+.bordas{
+	border-radius: 10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px
+}
 
+.sombra{
+	box-shadow: 2px 5px 10px #ccc;
+	/*text-shadow:5px 5px 5px #000000   */
+	-webkit-box-shadow: 2px 5px 10px #ccc;
+	border: 1px solid #ddd;
+}
 
+/* CAIXAS Grids*/
 
+.caixa{
+	float:left;
+	width:100%;
+	/* img vai t +1% */
+	margin:0.5%;
+	/* min-height: 400px deixa todas a img  */
+}
 
+.caixa3{
+	width:24%
+}
 
+.caixa6{
+	width:49%
+}
 
+.caixa6{
+	width:74%
+}
